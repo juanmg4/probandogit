@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Modern font */
+    background-color: #f8f9fa; /* Lighter, softer background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.top-bar {
+    width: 100%;
+    height: 10px; /* Delgada franja */
+    background-color: #f39c12; /* Muted orange, similar to button */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; /* Permite que el contenedor ocupe el espacio restante */
+    padding-top: 20px; /* Espacio para la barra superior */
+}
+
+.login-box {
+    background-color: #ffffff; /* Blanco puro */
+    padding: 40px;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More modern shadow */
+    text-align: center;
+    width: 350px; /* Ancho fijo para la caja de login */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700; /* Use a bolder weight from Inter font */
+    color: #2c3e50; /* Softer dark blue */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #e74c3c; /* Softer red */
+    margin-right: 10px;
+    border-radius: 4px; /* Ligeramente redondeado */
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* No cambiar */
+    height: 100%; /* No cambiar */
+    background-color: #3498db; /* Softer blue */
+    clip-path: polygon(0 0, 100% 0, 0 100%); /* Para simular un icono dividido */
+    opacity: 0.7;
+}
+
+h1 {
+    font-size: 24px; /* Slightly larger for emphasis */
+    color: #34495e; /* Darker text for contrast */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600; /* Semibold */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #7f8c8d; /* Softer grey for labels */
+    font-size: 14px;
+    font-weight: 600; /* Semibold for labels */
+}
+
+.input-group input {
+    width: calc(100% - 20px); /* Ancho completo menos padding */
+    padding: 12px; /* Slightly more padding */
+    border: 1px solid #dcdcdc; /* Lighter border */
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #f39c12; /* Orange border on focus */
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2); /* Subtle focus shadow */
+}
+
+.confirm-button {
+    background-color: #f0ad4e; /* Naranja similar al de la imagen */
+    color: #ffffff;
+    padding: 14px 25px; /* Slightly more padding */
+    border: none;
+    border-radius: 6px; /* Consistent with inputs */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for subtle press effect */
+    width: 100%;
+    margin-top: 25px; /* Slightly more space */
+    font-weight: 600;
+}
+
+.confirm-button:hover {
+    background-color: #e69a2c; /* Slightly darker orange on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.confirm-button:active {
+    transform: translateY(0); /* Reset on click */
+    background-color: #d88c1f; /* Even darker on active */
+}
